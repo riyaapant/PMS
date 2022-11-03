@@ -10,8 +10,8 @@
         <!-- A simple footer section included in all pages -->
 
     <div class="footer">
-        <div class="info">
-            <p id="team">This project is a joint collaboration of Aishu Gyawali, Aanjana Chaudhari, Priyanka Sah and Riya Pant</p>
+        <div class="footerText">
+            <p id="team">This project is a joint collaboration of Aishu Gyawali, Aanjana Chaudhari, Priyanka Sah and Riya Pant.</p>
             <p id="aboutPms">
                 The Project Management System (PMS) is a platform that inspires creativity and collaboration. Share your ideas and find out what others are thinking.
         </p>

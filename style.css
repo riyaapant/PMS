@@ -18,19 +18,13 @@ body {
 
 .footer {
     text-align: center;
-    display: flex;
-    flex-wrap: wrap;
     border-radius: 4px;
     background-color: rgb(168, 145, 145);
     margin-bottom: 20px;
 }
-.footer .info{
-    margin: auto;
-    margin: 5px;
-}
-
-.info {
-    margin: 40px;
+.footerText{
+    width: 100%;
+    padding: 10px;
 }
 
 .logo {
