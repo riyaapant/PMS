@@ -1,0 +1,24 @@
+--> create 'users' table
+ create table users
+ (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username varchar(50) NOT NULL,
+    password varchar(255) NOT NULL,
+    created_at datetime DEFAULT CURRENT_TIMESTAMP
+ );
+
+ --> create 'projects' table
+ create table projects
+ (
+     p_id int PRIMARY KEY AUTO_INCREMENT,
+     title tinytext NOT NULL,
+     summary text NOT NULL,
+     content text NOT NULL,
+     published_at date DEFAULT CURRENT_TIMESTAMP,
+     published_by varchar(50) NOT NULL
+ );
+
+ --> add foreign key constraint
+ ALTER TABLE users ADD INDEX index_projects (username);
+
+ ALTER TABLE projects ADD CONSTRAINT projects_fk FOREIGN KEY (published_by) REFERENCES users (username);

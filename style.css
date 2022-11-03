@@ -1,0 +1,219 @@
+/* all the styling in the same page */
+
+body {
+    margin: 20px 80px 0px 80px;
+    color: black;
+    background-color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 1.5em;
+}
+
+.header {
+    align-items: center;
+    display: flex;
+    margin: auto;
+    border-radius: 4px;
+    background-color: rgb(168, 145, 145);
+}
+
+.footer {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 4px;
+    background-color: rgb(168, 145, 145);
+    margin-bottom: 20px;
+}
+.footer .info{
+    margin: auto;
+    margin: 5px;
+}
+
+.info {
+    margin: 40px;
+}
+
+.logo {
+    width: 100px;
+    height: 150px;
+    flex: 1;
+}
+
+.pms {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #5F5248;
+    font-size: 50px;
+    width: 80%;
+}
+
+.container {
+    margin: 20px 0px 20px 0px;
+    background-color: rgb(168, 145, 145);
+    border: rgb(168, 145, 145);
+    border-radius: 4px;
+}
+
+.controlBtns {
+    background-color: rgb(168, 145, 145);
+    border: rgb(168, 145, 145);
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 20px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.form {
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+}
+
+.formFields {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 5px;
+}
+
+.formInput {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.formBtns {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+}
+
+.inputLabel {
+    width: 40%;
+    text-align: right;
+}
+
+.input {
+    margin-left: 10px;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.advice {
+    padding-bottom: 10px;
+}
+
+.links {
+    text-decoration: none;
+}
+
+.links:hover {
+    color: black;
+}
+
+.projectsContainer {
+    border: rgb(168, 145, 145);
+    margin: 20px 0px;
+    border-radius: 4px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn {
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    background-color: #5F5248;
+    border: 1px solid #5F5248;
+    border-radius: 4px;
+    color: white;
+    box-shadow: 1px 1px 5px 1px black;
+}
+
+.btn:hover {
+    border: 1px solid rgb(236, 230, 230);
+    border-radius: 4px;
+    background-color: rgb(236, 230, 230);
+    color: black;
+}
+
+.create,
+.login,
+.register,
+.viewProjects,
+.logOut,
+.homepage,
+.profile {
+    flex: 1;
+    text-align: center;
+}
+
+.heading {
+    text-align: center;
+}
+
+.createProjectForm {
+    height: fit-content;
+    margin: auto;
+}
+
+.projects {
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.projectInfo {
+    width: 70%;
+}
+
+.expandProject {
+    width: 30%;
+}
+
+hr {
+    width: 100%;
+}
+
+.detail {
+    padding: 8px;
+}
+
+.title {
+    font-size: 25px;
+}
+
+.expandProjects {
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+
+.expandProjectHeading {
+    width: max-content;
+    background-color: #5F5248;
+    border: 1px solid #5F5248;
+    border-radius: 4px;
+    color: white;
+    margin: auto;
+}
+
+.expandProjectHeading h2 {
+    font-size: 15px;
+    margin: 5px;
+}
+
+.projectDetails {
+    margin: 5px;
+    text-align: justify;
+}
+
+.publishDetails {
+    text-align: center;
+}
