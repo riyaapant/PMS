@@ -1,3 +1,6 @@
+--> create the database
+creaete database PMS;
+
 --> create 'users' table
  create table users
  (
@@ -16,11 +19,11 @@
      title tinytext NOT NULL,
      summary text NOT NULL,
      content text NOT NULL,
-     published_at date DEFAULT CURRENT_TIMESTAMP,
+     published_at datetime DEFAULT CURRENT_TIMESTAMP,
      published_by varchar(50) NOT NULL
  );
 
  --> add foreign key constraint
- ALTER TABLE users ADD INDEX index_projects (name);
+ ALTER TABLE users ADD INDEX index_projects (username);
 
- ALTER TABLE projects ADD CONSTRAINT projects_fk FOREIGN KEY (published_by) REFERENCES users (name);
+ ALTER TABLE projects ADD CONSTRAINT projects_fk FOREIGN KEY (published_by) REFERENCES users (username);

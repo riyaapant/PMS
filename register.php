@@ -38,8 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $confirmPassword = trim($_POST['confirmPassword']);
 
                 if ($password != $confirmPassword) {
-                    echo ("<script> alert('Passwords don't match!'); </script>");
-                } 
+                    echo ("<script> alert('Passwords do not match!');
+                    </script>");                } 
                 else {
 
                     //hash the user-given password

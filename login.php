@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("location: welcome.php");
             }
             else{
-                echo("<script> alert('Password doesn't match');
+                echo("<script> alert('Password does not match');
              </script>");
             }
             

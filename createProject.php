@@ -16,7 +16,8 @@
         if ($result == true) {
             header("location: welcome.php");
         } else
-            echo ("error");
+        echo ("<script> alert('Some error occured!');
+                </script>");
     } else {
         //if user is not logged in, ask to login first
         if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
@@ -38,13 +39,11 @@
                     echo "$title <br> $summary <br> $content <br> $uname";
                     echo "<br> $uname";
                     if ($result == true) {
-                        echo "<script> alert('Project added successfully'); </script>";
                         header("location: welcome.php");
                     } else
-                        echo ("error");
-                    // echo "<script> alert('Your project was not uploaded'); </script>";
+                    echo "<script> alert('Your project was not uploaded'); </script>";
                 } else
-                    echo ("oops");
+                    echo ("Some error occured");
             }
         }
     }
