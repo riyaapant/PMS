@@ -1,9 +1,8 @@
 <?php
-
-
     require("config.php");
     session_start();
     
+    //fetch project id from viewProject.php
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $id = $_POST['id'];
         $sql = "DELETE FROM projects where p_id = '$id'";
