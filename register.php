@@ -10,33 +10,35 @@ $username_err = $password_err = $confirm_password_err = "";
 //processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['confirmPassword'])) {
-        $username = trim($_POST['username']);
 
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $username = trim($_POST['username']);
+        
         //check if username matches the criteria
         if (!preg_match('/^[a-zA-Z0-9_]+$/', $username)) {
-            echo ("<script alert('Username can only contain letters, numbers and underscore');
-                 </script>");
+            echo ("<script> alert('Username can only contain letters, numbers and underscore');
+            </script>");
         } 
         
         else {
-
+            
             //check if the entered username already exists
             $sql = "SELECT id from users where username = '$username'";
             $result = $conn->query($sql);
             $num = $result->num_rows;
             if ($num > 0) {
-                echo ("<script alert('This username is already taken!');
-                    </script>");
+                echo ("<script> alert('This username is already taken!');
+                </script>");
             } 
             else {
-
+                
                 //if username is available, check both passwords
                 $password = trim($_POST['password']);
                 $confirmPassword = trim($_POST['confirmPassword']);
 
                 if ($password != $confirmPassword) {
-                    echo ("<script alert('Passwords don't match!');
-                    </script>");
+                    echo ("<script> alert('Passwords don't match!'); </script>");
                 } 
                 else {
 
@@ -44,14 +46,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $pwd = password_hash($password, PASSWORD_DEFAULT);
 
                     //creates new user account
-                    $sql = "INSERT INTO users (username, password) VALUES ('$username', '$pwd')";
+                    $sql = "INSERT INTO users (name, email, username, password) VALUES ('$name','$email','$username', '$pwd')";
                     $result = $conn->query($sql);
 
                     //if successful, prompt user to log in again
                     if ($result == true) {
                         header("location: login.php");
                     } else
-                        echo ("<script alert('Some error occured!');
+                        echo ("<script> alert('Some error occured!');
                     </script>");
                 }
             }
@@ -81,6 +83,16 @@ $conn->close();
         <div class="form" id="registerForm">
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                 <div class="formInput">
+
+                    <div class="formFields">
+                        <label class="inputLabel">Your name</label>
+                        <input type="text" required name="name" class="input" value="<?php echo $name; ?>">
+                    </div>
+
+                    <div class="formFields">
+                        <label class="inputLabel">Email</label>
+                        <input type="email" required name="email" class="input" value="<?php echo $email; ?>">
+                    </div>
 
                     <div class="formFields">
                         <label class="inputLabel">Username</label>

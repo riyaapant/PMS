@@ -44,7 +44,7 @@ session_start();
             echo ('
             <div class="logOut">
                 <form action="logout.php" method="post">
-                    <button class="btn" id="logoutBtn">Log Out</button>
+                    <button class="btn danger" id="logoutBtn">Log Out</button>
                 </form>
             </div>
             ');

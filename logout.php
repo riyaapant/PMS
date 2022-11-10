@@ -1,8 +1,9 @@
-<?php
 
+<?php
+ 
 //start a session
 session_start();
- 
+
 //unset all session variables
 session_unset(); 
 

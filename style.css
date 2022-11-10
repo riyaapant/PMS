@@ -1,3 +1,4 @@
+
 /* all the styling in the same page */
 
 body {
@@ -140,12 +141,17 @@ body {
 .viewProjects,
 .logOut,
 .homepage,
-.profile {
+.profile, .edit, .delete{
     flex: 1;
     text-align: center;
 }
 
+.danger.btn:hover{
+    background-color: #f24e4e;
+}
+
 .heading {
+    width: 100%;
     text-align: center;
 }
 

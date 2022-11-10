@@ -2,6 +2,8 @@
  create table users
  (
     id INT PRIMARY KEY AUTO_INCREMENT,
+    name varchar(50) NOT NULL,
+    email varchar(30) NOT NULL,
     username varchar(50) NOT NULL,
     password varchar(255) NOT NULL,
     created_at datetime DEFAULT CURRENT_TIMESTAMP
@@ -19,6 +21,6 @@
  );
 
  --> add foreign key constraint
- ALTER TABLE users ADD INDEX index_projects (username);
+ ALTER TABLE users ADD INDEX index_projects (name);
 
- ALTER TABLE projects ADD CONSTRAINT projects_fk FOREIGN KEY (published_by) REFERENCES users (username);
+ ALTER TABLE projects ADD CONSTRAINT projects_fk FOREIGN KEY (published_by) REFERENCES users (name);

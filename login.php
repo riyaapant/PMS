@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = trim($_POST["password"]);
 
         //check if the entered username exists in the database
-        $sql = "SELECT id, username, password FROM users WHERE username = '$username'";
+        $sql = "SELECT id, name, username, password FROM users WHERE username = '$username'";
 
         //executes the query
         $result = $conn->query($sql);
@@ -50,18 +50,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 session_start();
                 $_SESSION["loggedin"]=true;
                 $_SESSION["username"]=$row['username'];
+                $_SESSION["name"] = $row['name'];
                 $_SESSION["id"]=$row['id'];
                 header("location: welcome.php");
             }
             else{
-                echo("<script alert('Password doesn't match');
+                echo("<script> alert('Password doesn't match');
              </script>");
             }
             
         }
         else{
-            echo("<script alert('Invalid username');
-            </script>");
+            echo("<script> alert('Invalid username'); </script>");
         }
     }
 }

@@ -23,7 +23,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <body>
 
     <div class="heading" id="welcomeHeading">
-        <h2>Welcome to our site, <?php  echo htmlspecialchars($_SESSION['username']); ?>!</h2>
+        <h2>Welcome to our site, <?php  echo htmlspecialchars($_SESSION['name']); ?>!</h2>
     </div>
     
     <div class="controlBtns">
@@ -42,7 +42,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         
         <div class="logOut">
             <form action="logout.php" method="post">
-                <button class="btn" id="logoutBtn">Log Out</button>
+                <button class="btn danger" id="logoutBtn">Log Out</button>
             </form>
         </div>
         
