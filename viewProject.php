@@ -25,7 +25,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "SELECT * from users where username = '$published_by'";
     $result = $conn->query($sql);
     while ($row = mysqli_fetch_array($result))
+    {
         $email = $row['email'];
+        $user = $row['username'];
+    }
 }
 
 $conn->close();
@@ -71,7 +74,7 @@ $conn->close();
                 </div>
 
                 <?php
-                if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION["username"]==$user) {
                     echo ('
                     <div class="delete">
                 <form action="delete.php" method="post">
