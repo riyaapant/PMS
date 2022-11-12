@@ -45,8 +45,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     //hash the user-given password
                     $pwd = password_hash($password, PASSWORD_DEFAULT);
 
-                    //creates new user account
+                    //sql query to create new user account
                     $sql = "INSERT INTO users (name, email, username, password) VALUES ('$name','$email','$username', '$pwd')";
+
+                    //execute the query
                     $result = $conn->query($sql);
 
                     //if successful, prompt user to log in again

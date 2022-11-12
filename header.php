@@ -12,7 +12,7 @@
     <a href="index.php" class="links">
 
         <div class="header">
-            <img class= "logo" src="media/logo.png" alt="logo">
+            <img class="logo" src="media/logo.png" alt="logo">
             <h1 class="pms">Project Management System</h1>
         </div>
     </a>
